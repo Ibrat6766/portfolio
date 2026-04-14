@@ -291,4 +291,10 @@ Ibrat Matchanov — Python Developer & AI Enthusiast
 Built with ♥ in Tashkent, Uzbekistan
 `, 'color: #4f9cf9; font-family: monospace; font-size: 10px;');
 
+document.querySelectorAll(".mobile-link").forEach(link => {
+  link.addEventListener("click", () => {
+    document.querySelector(".mobile-menu").classList.remove("open");
+  });
+});
+
 
