@@ -295,6 +295,21 @@ document.querySelectorAll(".mobile-link").forEach(link => {
   link.addEventListener("click", () => {
     document.querySelector(".mobile-menu").classList.remove("open");
   });
+
+   window.addEventListener("DOMContentLoaded", () => {
+  const music = document.getElementById("bg-music");
+
+  if (!music) return;
+
+  // убираем muted после взаимодействия
+  const startMusic = () => {
+    music.muted = false;
+    music.play();
+  };
+
+  document.addEventListener("click", startMusic, { once: true });
+  document.addEventListener("mousemove", startMusic, { once: true });
+});
 });
 
 
